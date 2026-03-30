@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Cabernet Sauvignon",
+    "type": "red",
+    "region": "California",
+    "notes": "Dark fruit, oak, spice",
+    "pairing": "Steak, lamb"
+  },
+  {
+    "name": "Chardonnay",
+    "type": "white",
+    "region": "France",
+    "notes": "Butter, apple, vanilla",
+    "pairing": "Chicken, seafood"
+  },
+  {
+    "name": "Pinot Noir",
+    "type": "red",
+    "region": "Oregon",
+    "notes": "Cherry, earth, light spice",
+    "pairing": "Duck, mushrooms"
+  },
+  {
+    "name": "Sauvignon Blanc",
+    "type": "white",
+    "region": "New Zealand",
+    "notes": "Citrus, grassy, crisp",
+    "pairing": "Salad, fish"
+  },
+  {
+    "name": "Rosé",
+    "type": "rose",
+    "region": "Spain",
+    "notes": "Strawberry, floral, light",
+    "pairing": "Picnic foods, cheese"
+  }
+]
