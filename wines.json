@@ -1,37 +1,766 @@
 [
   {
-    "name": "Cabernet Sauvignon",
-    "type": "red",
-    "region": "California",
-    "notes": "Dark fruit, oak, spice",
-    "pairing": "Steak, lamb"
-  },
-  {
-    "name": "Chardonnay",
+    "id": "moscato",
+    "entryType": "grape",
+    "displayName": "Moscato",
     "type": "white",
-    "region": "France",
-    "notes": "Butter, apple, vanilla",
-    "pairing": "Chicken, seafood"
+    "classification": "native",
+    "body": "light",
+    "sweetness": "sweet",
+    "aliases": ["Moscato", "Muscat"],
+    "familyNotes": "An aromatic grape known for floral perfume, peach, citrus, and honeyed sweetness.",
+    "varieties": [
+      {
+        "label": "Moscato",
+        "continent": "Europe",
+        "country": "Italy",
+        "region": "Piedmont",
+        "signatureRegion": "Asti",
+        "notes": "Peach, orange blossom, honey",
+        "pairing": "Fruit desserts, spicy food",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+      }
+    ]
   },
   {
-    "name": "Pinot Noir",
-    "type": "red",
-    "region": "Oregon",
-    "notes": "Cherry, earth, light spice",
-    "pairing": "Duck, mushrooms"
-  },
-  {
-    "name": "Sauvignon Blanc",
+    "id": "pinot-blanc",
+    "entryType": "grape",
+    "displayName": "Pinot Blanc",
     "type": "white",
-    "region": "New Zealand",
-    "notes": "Citrus, grassy, crisp",
-    "pairing": "Salad, fish"
+    "classification": "native",
+    "body": "medium-light",
+    "sweetness": "dry",
+    "aliases": ["Pinot Blanc"],
+    "familyNotes": "A fresh white grape with orchard fruit, subtle floral notes, and clean acidity.",
+    "varieties": [
+      {
+        "label": "Pinot Blanc",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Alsace",
+        "signatureRegion": "Alsace",
+        "notes": "Pear, apple, almond",
+        "pairing": "Chicken, seafood",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb"
+      },
+      {
+        "label": "Pinot Blanc",
+        "continent": "Europe",
+        "country": "Italy",
+        "region": "Alto Adige",
+        "signatureRegion": "Alto Adige",
+        "notes": "Apple, lemon, mineral",
+        "pairing": "Salads, white fish",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      }
+    ]
   },
   {
-    "name": "Rosé",
-    "type": "rose",
-    "region": "Spain",
-    "notes": "Strawberry, floral, light",
-    "pairing": "Picnic foods, cheese"
+    "id": "concord",
+    "entryType": "grape",
+    "displayName": "Concord",
+    "type": "red",
+    "classification": "hybrid",
+    "body": "medium",
+    "sweetness": "sweet",
+    "aliases": ["Concord"],
+    "familyNotes": "A deeply grapey American grape known for jammy fruit and sweet juice-style character.",
+    "varieties": [
+      {
+        "label": "Concord",
+        "continent": "North America",
+        "country": "USA",
+        "region": "New York",
+        "signatureRegion": "Finger Lakes",
+        "notes": "Grape jelly, berry, candy-like fruit",
+        "pairing": "Desserts, casual cheese boards",
+        "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03"
+      }
+    ]
+  },
+  {
+    "id": "gewurztraminer",
+    "entryType": "grape",
+    "displayName": "Gewurztraminer",
+    "type": "white",
+    "classification": "native",
+    "body": "medium",
+    "sweetness": "off-dry",
+    "aliases": ["Gewurztraminer"],
+    "familyNotes": "An intensely aromatic white grape with lychee, rose petal, ginger, and spice.",
+    "varieties": [
+      {
+        "label": "Gewurztraminer",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Alsace",
+        "signatureRegion": "Alsace",
+        "notes": "Lychee, rose, ginger",
+        "pairing": "Thai food, curry, pork",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+      },
+      {
+        "label": "Gewurztraminer",
+        "continent": "North America",
+        "country": "USA",
+        "region": "Washington",
+        "signatureRegion": "Columbia Valley",
+        "notes": "Tropical fruit, rose, spice",
+        "pairing": "Spicy noodles, soft cheeses",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      }
+    ]
+  },
+  {
+    "id": "seyval-blanc",
+    "entryType": "grape",
+    "displayName": "Seyval Blanc",
+    "type": "white",
+    "classification": "hybrid",
+    "body": "light",
+    "sweetness": "dry",
+    "aliases": ["Seyval Blanc"],
+    "familyNotes": "A cool-climate hybrid white known for crisp acidity and citrus-green fruit character.",
+    "varieties": [
+      {
+        "label": "Seyval Blanc",
+        "continent": "North America",
+        "country": "USA",
+        "region": "New York",
+        "signatureRegion": "Finger Lakes",
+        "notes": "Lemon, green apple, bright acidity",
+        "pairing": "Seafood, salads",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      }
+    ]
+  },
+  {
+    "id": "catawba",
+    "entryType": "grape",
+    "displayName": "Catawba",
+    "type": "sparkling",
+    "classification": "hybrid",
+    "body": "light",
+    "sweetness": "off-dry",
+    "aliases": ["Catawba"],
+    "familyNotes": "A pink-skinned American grape historically used for sweet and sparkling wines.",
+    "varieties": [
+      {
+        "label": "Catawba",
+        "continent": "North America",
+        "country": "USA",
+        "region": "Ohio",
+        "signatureRegion": "Lake Erie",
+        "notes": "Strawberry, grape, floral lift",
+        "pairing": "Brunch foods, fruit, light desserts",
+        "image": "https://images.unsplash.com/photo-1524593166156-312f362cada0"
+      }
+    ]
+  },
+  {
+    "id": "cabernet-franc",
+    "entryType": "grape",
+    "displayName": "Cabernet Franc",
+    "type": "red",
+    "classification": "native",
+    "body": "medium",
+    "sweetness": "dry",
+    "aliases": ["Cabernet Franc"],
+    "familyNotes": "A medium-bodied red with red fruit, herbs, violets, and peppery lift.",
+    "varieties": [
+      {
+        "label": "Cabernet Franc",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Loire Valley",
+        "signatureRegion": "Loire Valley",
+        "notes": "Red currant, herbs, violet",
+        "pairing": "Roast chicken, mushrooms",
+        "image": "https://images.unsplash.com/photo-1514361892635-cebbca3d1a0b"
+      },
+      {
+        "label": "Cabernet Franc",
+        "continent": "North America",
+        "country": "USA",
+        "region": "New York",
+        "signatureRegion": "Finger Lakes",
+        "notes": "Cherry, pepper, earthy herbs",
+        "pairing": "Pork, roasted vegetables",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd"
+      }
+    ]
+  },
+  {
+    "id": "vidal-blanc",
+    "entryType": "grape",
+    "displayName": "Vidal Blanc",
+    "type": "white",
+    "classification": "hybrid",
+    "body": "medium",
+    "sweetness": "off-dry",
+    "aliases": ["Vidal Blanc"],
+    "familyNotes": "A hardy hybrid white often used for crisp table wines and rich ice wines.",
+    "varieties": [
+      {
+        "label": "Vidal Blanc",
+        "continent": "North America",
+        "country": "Canada",
+        "region": "Ontario",
+        "signatureRegion": "Niagara Peninsula",
+        "notes": "Apricot, honey, citrus",
+        "pairing": "Blue cheese, spicy dishes",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+      },
+      {
+        "label": "Vidal Blanc",
+        "continent": "North America",
+        "country": "USA",
+        "region": "New York",
+        "signatureRegion": "Finger Lakes",
+        "notes": "Peach, lemon, floral sweetness",
+        "pairing": "Desserts, foie gras, soft cheese",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb"
+      }
+    ]
+  },
+  {
+    "id": "petit-verdot",
+    "entryType": "grape",
+    "displayName": "Petit Verdot",
+    "type": "red",
+    "classification": "native",
+    "body": "full",
+    "sweetness": "dry",
+    "aliases": ["Petit Verdot"],
+    "familyNotes": "A deeply colored red grape with violet, black fruit, tannin, and spice.",
+    "varieties": [
+      {
+        "label": "Petit Verdot",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Bordeaux",
+        "signatureRegion": "Bordeaux",
+        "notes": "Blackberry, violet, cedar",
+        "pairing": "Steak, lamb",
+        "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03"
+      },
+      {
+        "label": "Petit Verdot",
+        "continent": "North America",
+        "country": "USA",
+        "region": "Virginia",
+        "signatureRegion": "Monticello",
+        "notes": "Dark plum, spice, firm tannin",
+        "pairing": "Braised meats, aged cheese",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd"
+      }
+    ]
+  },
+  {
+    "id": "semillon",
+    "entryType": "grape",
+    "displayName": "Semillon",
+    "type": "white",
+    "classification": "native",
+    "body": "medium-full",
+    "sweetness": "dry",
+    "aliases": ["Semillon", "Sémillon"],
+    "familyNotes": "A textured white grape capable of waxy, citrusy dry wines and luscious sweet wines.",
+    "varieties": [
+      {
+        "label": "Semillon",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Bordeaux",
+        "signatureRegion": "Bordeaux",
+        "notes": "Lemon curd, beeswax, fig",
+        "pairing": "Roast chicken, creamy sauces",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb"
+      },
+      {
+        "label": "Semillon",
+        "continent": "Oceania",
+        "country": "Australia",
+        "region": "New South Wales",
+        "signatureRegion": "Hunter Valley",
+        "notes": "Lime, toast, lanolin",
+        "pairing": "Shellfish, roast fish",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      }
+    ]
+  },
+  {
+    "id": "carmenere",
+    "entryType": "grape",
+    "displayName": "Carmenere",
+    "type": "red",
+    "classification": "native",
+    "body": "medium-full",
+    "sweetness": "dry",
+    "aliases": ["Carmenere", "Carménère"],
+    "familyNotes": "A plush red grape known for black fruit, herbs, cocoa, and peppery green notes.",
+    "varieties": [
+      {
+        "label": "Carmenere",
+        "continent": "South America",
+        "country": "Chile",
+        "region": "Central Valley",
+        "signatureRegion": "Colchagua Valley",
+        "notes": "Black cherry, green pepper, cocoa",
+        "pairing": "Grilled steak, empanadas",
+        "image": "https://images.unsplash.com/photo-1514361892635-cebbca3d1a0b"
+      }
+    ]
+  },
+  {
+    "id": "torrontes",
+    "entryType": "grape",
+    "displayName": "Torrontes",
+    "type": "white",
+    "classification": "native",
+    "body": "light-medium",
+    "sweetness": "dry",
+    "aliases": ["Torrontes", "Torrontés"],
+    "familyNotes": "An aromatic Argentine white with jasmine, citrus, and stone fruit over crisp acidity.",
+    "varieties": [
+      {
+        "label": "Torrontes",
+        "continent": "South America",
+        "country": "Argentina",
+        "region": "Salta",
+        "signatureRegion": "Cafayate",
+        "notes": "Jasmine, peach, lemon peel",
+        "pairing": "Spicy food, ceviche",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+      }
+    ]
+  },
+  {
+    "id": "malbec",
+    "entryType": "grape",
+    "displayName": "Malbec",
+    "type": "red",
+    "classification": "native",
+    "body": "full",
+    "sweetness": "dry",
+    "aliases": ["Malbec"],
+    "familyNotes": "A bold red grape with dark fruit, plum, violet, and a plush, spicy finish.",
+    "varieties": [
+      {
+        "label": "Malbec",
+        "continent": "South America",
+        "country": "Argentina",
+        "region": "Mendoza",
+        "signatureRegion": "Mendoza",
+        "notes": "Black plum, violet, cocoa",
+        "pairing": "Beef, grilled meats",
+        "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03"
+      },
+      {
+        "label": "Malbec",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Southwest France",
+        "signatureRegion": "Cahors",
+        "notes": "Blackberry, earth, tobacco",
+        "pairing": "Duck, lamb",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd"
+      }
+    ]
+  },
+  {
+    "id": "tempranillo",
+    "entryType": "grape",
+    "displayName": "Tempranillo",
+    "type": "red",
+    "classification": "native",
+    "body": "medium-full",
+    "sweetness": "dry",
+    "aliases": ["Tempranillo"],
+    "familyNotes": "Spain’s flagship red grape with cherry fruit, leather, tobacco, and savory spice.",
+    "varieties": [
+      {
+        "label": "Tempranillo",
+        "continent": "Europe",
+        "country": "Spain",
+        "region": "Rioja",
+        "signatureRegion": "Rioja",
+        "notes": "Cherry, cedar, leather",
+        "pairing": "Lamb, tapas, manchego",
+        "image": "https://images.unsplash.com/photo-1514361892635-cebbca3d1a0b"
+      },
+      {
+        "label": "Tempranillo",
+        "continent": "Europe",
+        "country": "Spain",
+        "region": "Ribera del Duero",
+        "signatureRegion": "Ribera del Duero",
+        "notes": "Black fruit, vanilla, tobacco",
+        "pairing": "Roast pork, charcuterie",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd"
+      }
+    ]
+  },
+  {
+    "id": "sangiovese",
+    "entryType": "grape",
+    "displayName": "Sangiovese",
+    "type": "red",
+    "classification": "native",
+    "body": "medium",
+    "sweetness": "dry",
+    "aliases": ["Sangiovese"],
+    "familyNotes": "An Italian red known for sour cherry, herbs, tomato leaf, and bright acidity.",
+    "varieties": [
+      {
+        "label": "Sangiovese",
+        "continent": "Europe",
+        "country": "Italy",
+        "region": "Tuscany",
+        "signatureRegion": "Tuscany",
+        "notes": "Cherry, dried herbs, tea leaf",
+        "pairing": "Pasta, pizza, tomato sauces",
+        "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03"
+      }
+    ]
+  },
+  {
+    "id": "chenin-blanc",
+    "entryType": "grape",
+    "displayName": "Chenin Blanc",
+    "type": "white",
+    "classification": "native",
+    "body": "medium",
+    "sweetness": "off-dry",
+    "aliases": ["Chenin Blanc"],
+    "familyNotes": "A highly versatile white grape ranging from bone dry to sweet and sparkling, with bright acidity.",
+    "varieties": [
+      {
+        "label": "Chenin Blanc",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Loire Valley",
+        "signatureRegion": "Loire Valley",
+        "notes": "Quince, apple, chamomile",
+        "pairing": "Goat cheese, roast chicken",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      },
+      {
+        "label": "Chenin Blanc",
+        "continent": "Africa",
+        "country": "South Africa",
+        "region": "Western Cape",
+        "signatureRegion": "Stellenbosch",
+        "notes": "Pear, honey, waxy citrus",
+        "pairing": "Poultry, seafood",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb"
+      }
+    ]
+  },
+  {
+    "id": "pinotage",
+    "entryType": "grape",
+    "displayName": "Pinotage",
+    "type": "red",
+    "classification": "hybrid",
+    "body": "medium-full",
+    "sweetness": "dry",
+    "aliases": ["Pinotage"],
+    "familyNotes": "A South African crossing known for smoky, dark-fruited, earthy red wines.",
+    "varieties": [
+      {
+        "label": "Pinotage",
+        "continent": "Africa",
+        "country": "South Africa",
+        "region": "Western Cape",
+        "signatureRegion": "Stellenbosch",
+        "notes": "Blackberry, smoke, plum",
+        "pairing": "Barbecue, burgers",
+        "image": "https://images.unsplash.com/photo-1514361892635-cebbca3d1a0b"
+      }
+    ]
+  },
+  {
+    "id": "pinot-meunier",
+    "entryType": "grape",
+    "displayName": "Pinot Meunier",
+    "type": "sparkling",
+    "classification": "native",
+    "body": "medium-light",
+    "sweetness": "dry",
+    "aliases": ["Pinot Meunier", "Meunier"],
+    "familyNotes": "A classic sparkling grape especially associated with Champagne blends and fresh red-fruited lift.",
+    "varieties": [
+      {
+        "label": "Pinot Meunier",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Champagne",
+        "signatureRegion": "Champagne",
+        "notes": "White cherry, raspberry, floral freshness",
+        "pairing": "Canapes, shellfish",
+        "image": "https://images.unsplash.com/photo-1514361892635-cebbca3d1a0b"
+      }
+    ]
+  },
+  {
+    "id": "aravelle",
+    "entryType": "grape",
+    "displayName": "Aravelle",
+    "type": "white",
+    "classification": "hybrid",
+    "body": "light",
+    "sweetness": "off-dry",
+    "aliases": ["Aravelle"],
+    "familyNotes": "A cold-hardy hybrid white used in some northeastern U.S. vineyards for fresh, fruit-driven wines.",
+    "varieties": [
+      {
+        "label": "Aravelle",
+        "continent": "North America",
+        "country": "USA",
+        "region": "New York",
+        "signatureRegion": "Finger Lakes",
+        "notes": "Apple, melon, citrus",
+        "pairing": "Salads, white fish",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      }
+    ]
+  },
+  {
+    "id": "muscadelle",
+    "entryType": "grape",
+    "displayName": "Muscadelle",
+    "type": "white",
+    "classification": "native",
+    "body": "medium",
+    "sweetness": "off-dry",
+    "aliases": ["Muscadelle"],
+    "familyNotes": "An aromatic white grape often used in blends, with floral and grapey notes.",
+    "varieties": [
+      {
+        "label": "Muscadelle",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Bordeaux",
+        "signatureRegion": "Bordeaux",
+        "notes": "Floral perfume, citrus, honey",
+        "pairing": "Soft cheese, pâté, seafood",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+      }
+    ]
+  },
+  {
+    "id": "champagne-style",
+    "entryType": "sparkling style",
+    "displayName": "Champagne",
+    "type": "sparkling",
+    "classification": "style",
+    "body": "medium",
+    "sweetness": "dry",
+    "aliases": ["Champagne"],
+    "familyNotes": "A traditional-method sparkling style from Champagne, classically built around Chardonnay, Pinot Noir, and Meunier.",
+    "varieties": [
+      {
+        "label": "Champagne",
+        "continent": "Europe",
+        "country": "France",
+        "region": "Champagne",
+        "signatureRegion": "Champagne",
+        "notes": "Lemon, brioche, chalk, apple",
+        "pairing": "Oysters, caviar, fried food",
+        "image": "https://images.unsplash.com/photo-1514361892635-cebbca3d1a0b"
+      }
+    ]
+  },
+  {
+    "id": "prosecco-style",
+    "entryType": "sparkling style",
+    "displayName": "Prosecco",
+    "type": "sparkling",
+    "classification": "style",
+    "body": "light",
+    "sweetness": "off-dry",
+    "aliases": ["Prosecco"],
+    "familyNotes": "An Italian sparkling style centered on Glera, known for fresh apple, pear, and floral fruit.",
+    "varieties": [
+      {
+        "label": "Prosecco",
+        "continent": "Europe",
+        "country": "Italy",
+        "region": "Veneto",
+        "signatureRegion": "Conegliano-Valdobbiadene",
+        "notes": "Green apple, pear, white flowers",
+        "pairing": "Aperitifs, prosciutto, brunch",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb"
+      }
+    ]
+  },
+  {
+    "id": "cava-style",
+    "entryType": "sparkling style",
+    "displayName": "Cava",
+    "type": "sparkling",
+    "classification": "style",
+    "body": "medium-light",
+    "sweetness": "dry",
+    "aliases": ["Cava"],
+    "familyNotes": "A Spanish traditional-method sparkling style commonly linked with Macabeo, Xarel-lo, and Parellada.",
+    "varieties": [
+      {
+        "label": "Cava",
+        "continent": "Europe",
+        "country": "Spain",
+        "region": "Catalonia",
+        "signatureRegion": "Penedes",
+        "notes": "Citrus, almond, toast",
+        "pairing": "Tapas, seafood, fried foods",
+        "image": "https://images.unsplash.com/photo-1514361892635-cebbca3d1a0b"
+      }
+    ]
+  },
+  {
+    "id": "asti-style",
+    "entryType": "sparkling style",
+    "displayName": "Asti",
+    "type": "sparkling",
+    "classification": "style",
+    "body": "light",
+    "sweetness": "sweet",
+    "aliases": ["Asti", "Asti Spumante"],
+    "familyNotes": "A sweet sparkling style from Piedmont made from Moscato Bianco, with floral, peachy aromatics.",
+    "varieties": [
+      {
+        "label": "Asti",
+        "continent": "Europe",
+        "country": "Italy",
+        "region": "Piedmont",
+        "signatureRegion": "Asti",
+        "notes": "Peach, sage, orange blossom",
+        "pairing": "Fruit tarts, panettone, brunch sweets",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+      }
+    ]
+  },
+  {
+    "id": "sekt-style",
+    "entryType": "sparkling style",
+    "displayName": "Sekt",
+    "type": "sparkling",
+    "classification": "style",
+    "body": "light-medium",
+    "sweetness": "dry",
+    "aliases": ["Sekt"],
+    "familyNotes": "A German sparkling wine category made in multiple styles and from several grape varieties, often including Riesling.",
+    "varieties": [
+      {
+        "label": "Sekt",
+        "continent": "Europe",
+        "country": "Germany",
+        "region": "Mosel",
+        "signatureRegion": "Mosel",
+        "notes": "Apple, citrus, lively bubbles",
+        "pairing": "Pretzels, charcuterie, shellfish",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb"
+      }
+    ]
+  },
+  {
+    "id": "syrah-shiraz",
+    "entryType": "grape",
+    "displayName": "Syrah / Shiraz",
+    "type": "red",
+    "classification": "native",
+    "body": "full",
+    "sweetness": "dry",
+    "aliases": ["Syrah", "Shiraz"],
+    "familyNotes": "A bold dark-fruited red known for pepper, smoke, and spice, expressed differently across regions.",
+    "varieties": [
+      {
+        "label": "Syrah",
+        "continent": "North America",
+        "country": "USA",
+        "region": "California",
+        "signatureRegion": "Central Coast",
+        "notes": "Blackberry, black pepper, smoke",
+        "pairing": "BBQ, grilled meats",
+        "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03"
+      },
+      {
+        "label": "Shiraz",
+        "continent": "Oceania",
+        "country": "Australia",
+        "region": "South Australia",
+        "signatureRegion": "Barossa Valley",
+        "notes": "Jammy blackberry, spice, cocoa",
+        "pairing": "Lamb, barbecue",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb"
+      }
+    ]
+  },
+  {
+    "id": "cabernet-sauvignon",
+    "entryType": "grape",
+    "displayName": "Cabernet Sauvignon",
+    "type": "red",
+    "classification": "native",
+    "body": "full",
+    "sweetness": "dry",
+    "aliases": ["Cabernet Sauvignon"],
+    "familyNotes": "A structured global red grape known for dark fruit, tannin, cassis, and oak-friendly character.",
+    "varieties": [
+      {
+        "label": "Cabernet Sauvignon",
+        "continent": "North America",
+        "country": "USA",
+        "region": "California",
+        "signatureRegion": "Napa Valley",
+        "notes": "Cassis, oak, dark fruit",
+        "pairing": "Steak, lamb",
+        "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03"
+      },
+      {
+        "label": "Cabernet Sauvignon",
+        "continent": "South America",
+        "country": "Chile",
+        "region": "Maipo Valley",
+        "signatureRegion": "Maipo Valley",
+        "notes": "Blackcurrant, mint, cedar",
+        "pairing": "Beef, hard cheese",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd"
+      }
+    ]
+  },
+  {
+    "id": "riesling",
+    "entryType": "grape",
+    "displayName": "Riesling",
+    "type": "white",
+    "classification": "native",
+    "body": "light",
+    "sweetness": "sweet",
+    "aliases": ["Riesling"],
+    "familyNotes": "A high-acid aromatic white grape with floral, lime, and stone fruit character.",
+    "varieties": [
+      {
+        "label": "Riesling",
+        "continent": "Europe",
+        "country": "Germany",
+        "region": "Mosel",
+        "signatureRegion": "Mosel",
+        "notes": "Lime, slate, honey",
+        "pairing": "Spicy dishes, pork",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+      },
+      {
+        "label": "Riesling",
+        "continent": "Oceania",
+        "country": "Australia",
+        "region": "South Australia",
+        "signatureRegion": "Clare Valley",
+        "notes": "Lime zest, minerals, floral notes",
+        "pairing": "Seafood, Asian cuisine",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      }
+    ]
   }
 ]

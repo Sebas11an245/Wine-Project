@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wine Explorer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wines of the World</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<>
+<body>
+  <header>
+    <h1>🍷 Wines of the World</h1>
+    <p class="subtitle">Explore grapes, regions, and sparkling traditions across the globe.</p>
 
-    <header>
-        <h1>🍷 Wine Explorer</h1>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search grape, region, or alias..." />
 
-        <div class="controls">
-            <input type="text" id="searchInput" placeholder="Search wine...">
+      <select id="typeFilter">
+        <option value="all">All Types</option>
+        <option value="red">Red</option>
+        <option value="white">White</option>
+        <option value="sparkling">Sparkling</option>
+      </select>
 
-            <select id="typeFilter">
-                <option value="all">All Types</option>
-                <option value="red">Red</option>
-                <option value="white">White</option>
-                <option value="rose">Rosé</option>
-            </select>
-        </div>
-    </header>
+      <select id="continentFilter">
+        <option value="all">All Continents</option>
+        <option value="North America">North America</option>
+        <option value="Europe">Europe</option>
+        <option value="South America">South America</option>
+        <option value="Oceania">Oceania</option>
+      </select>
 
-    <main>
-        <div id="wineContainer" class="grid"></div>
-    </main>
+      <select id="signatureFilter">
+        <option value="all">All Signature Regions</option>
+        <option value="Napa Valley">Napa Valley</option>
+        <option value="Willamette Valley">Willamette Valley</option>
+        <option value="Barossa Valley">Barossa Valley</option>
+        <option value="Marlborough">Marlborough</option>
+        <option value="Mosel">Mosel</option>
+        <option value="Bordeaux">Bordeaux</option>
+        <option value="Mendoza">Mendoza</option>
+        <option value="Rioja">Rioja</option>
+        <option value="Tuscany">Tuscany</option>
+        <option value="Loire Valley">Loire Valley</option>
+        <option value="Penedès">Penedès</option>
+        <option value="Champagne">Champagne</option>
+      </select>
 
-    <script src="script.js"></script>
-    </body>
+      <select id="classificationFilter">
+        <option value="all">Native + Hybrid</option>
+        <option value="native">Native</option>
+        <option value="hybrid">Hybrid</option>
+      </select>
 
+      <button id="sortBtn">Sort A–Z</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="resultsCount" class="results-count"></div>
+    <div id="wineContainer" class="grid"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
