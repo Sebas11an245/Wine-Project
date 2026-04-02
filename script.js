@@ -8,9 +8,8 @@ fetch("wines.json")
   .then((res) => res.json())
   .then((data) => {
     wines = data;
-    displayedWines = [...wines];
+    displayedWines = shuffleArray(wines);
 
-    // Set default displayed regional version for each card
     wines.forEach((wine) => {
       variantIndexMap[wine.id] = 0;
     });
@@ -27,18 +26,16 @@ fetch("wines.json")
 document.getElementById("searchInput").addEventListener("input", filterWines);
 document.getElementById("typeFilter").addEventListener("change", filterWines);
 document.getElementById("continentFilter").addEventListener("change", filterWines);
-document.getElementById("signatureFilter").addEventListener("change", filterWines);
+document.getElementById("countryFilter").addEventListener("change", filterWines);
 document.getElementById("classificationFilter").addEventListener("change", filterWines);
 document.getElementById("sortBtn").addEventListener("click", sortAZ);
 document.getElementById("resetBtn").addEventListener("click", resetFilters);
 
-// Render all visible wine cards
 function displayWines(wineList) {
   const container = document.getElementById("wineContainer");
   const resultsCount = document.getElementById("resultsCount");
 
   container.innerHTML = "";
-  resultsCount.textContent = `${wineList.length} card${wineList.length !== 1 ? "s" : ""} found`;
 
   if (wineList.length === 0) {
     container.innerHTML = '<p class="empty-message">No wines match your filters.</p>';
@@ -54,9 +51,9 @@ function displayWines(wineList) {
     card.classList.add("card");
 
     card.innerHTML = `
-      <img src="${variant.image}" alt="${wine.displayName}" class="wine-img" />
+      <img src="${variant.image}" alt="${variant.label}" class="wine-img" />
 
-      <h3>${wine.displayName}</h3>
+      <h3>${variant.label}</h3>
       <p class="type ${wine.type}">${capitalize(wine.type)}</p>
 
       <p class="meta"><strong>Entry Type:</strong> ${capitalizeWords(wine.entryType)}</p>
@@ -72,27 +69,26 @@ function displayWines(wineList) {
         <p><strong>📍 Region:</strong> ${variant.region}</p>
         <p><strong>🍇 Signature Region:</strong> ${variant.signatureRegion}</p>
 
-        <p><strong>Body:</strong> ${capitalizeWords(wine.body)}</p>
-        <p><strong>Sweetness:</strong> ${capitalizeWords(wine.sweetness)}</p>
+        <p><strong>Body:</strong> ${capitalizeWords(variant.body)}</p>
+        <p><strong>Sweetness:</strong> ${capitalizeWords(variant.sweetness)}</p>
 
         <p>${variant.notes}</p>
         <p><em>🍽 ${variant.pairing}</em></p>
 
-        ${
-          wine.varieties.length > 1
-            ? `
+        ${wine.varieties.length > 1
+        ? `
           <div class="variant-controls">
             <button class="small-btn" onclick="prevVariant('${wine.id}')">← Prev</button>
             <span class="variant-status">${safeIndex + 1} / ${wine.varieties.length}</span>
             <button class="small-btn" onclick="nextVariant('${wine.id}')">Next →</button>
           </div>
         `
-            : `
+        : `
           <div class="variant-controls">
             <span class="variant-status">1 / 1</span>
           </div>
         `
-        }
+      }
       </div>
     `;
 
@@ -100,12 +96,11 @@ function displayWines(wineList) {
   });
 }
 
-// Main filter logic
 function filterWines() {
   const search = document.getElementById("searchInput").value.trim().toLowerCase();
   const type = document.getElementById("typeFilter").value;
   const continent = document.getElementById("continentFilter").value;
-  const signature = document.getElementById("signatureFilter").value;
+  const country = document.getElementById("countryFilter").value;
   const classification = document.getElementById("classificationFilter").value;
 
   displayedWines = wines.filter((wine) => {
@@ -125,23 +120,15 @@ function filterWines() {
       );
 
     const matchesType = type === "all" || wine.type === type;
-
-    const matchesContinent =
-      continent === "all" ||
-      wine.varieties.some((v) => v.continent === continent);
-
-    const matchesSignature =
-      signature === "all" ||
-      wine.varieties.some((v) => v.signatureRegion === signature);
-
-    const matchesClassification =
-      classification === "all" || wine.classification === classification;
+    const matchesContinent = continent === "all" || wine.varieties.some((v) => v.continent === continent);
+    const matchesCountry = country === "all" || wine.varieties.some((v) => v.country === country);
+    const matchesClassification = classification === "all" || wine.classification === classification;
 
     return (
       matchesSearch &&
       matchesType &&
       matchesContinent &&
-      matchesSignature &&
+      matchesCountry &&
       matchesClassification
     );
   });
@@ -150,7 +137,6 @@ function filterWines() {
   displayWines(displayedWines);
 }
 
-// Flip forward through regional variants
 function nextVariant(wineId) {
   const wine = wines.find((w) => w.id === wineId);
   if (!wine) return;
@@ -161,7 +147,6 @@ function nextVariant(wineId) {
   displayWines(displayedWines);
 }
 
-// Flip backward through regional variants
 function prevVariant(wineId) {
   const wine = wines.find((w) => w.id === wineId);
   if (!wine) return;
@@ -173,11 +158,10 @@ function prevVariant(wineId) {
   displayWines(displayedWines);
 }
 
-// Sort cards alphabetically by display name
 function sortAZ() {
   if (currentSort === "az") {
     currentSort = "default";
-    displayedWines = [...displayedWines].sort((a, b) => 0);
+    displayedWines = shuffleArray(displayedWines);
   } else {
     currentSort = "az";
   }
@@ -186,7 +170,6 @@ function sortAZ() {
   displayWines(displayedWines);
 }
 
-// Apply whichever sort is currently active
 function applyCurrentSort() {
   if (currentSort === "az") {
     displayedWines = [...displayedWines].sort((a, b) =>
@@ -195,20 +178,29 @@ function applyCurrentSort() {
   }
 }
 
-// Reset all filters and sorting
 function resetFilters() {
   document.getElementById("searchInput").value = "";
   document.getElementById("typeFilter").value = "all";
   document.getElementById("continentFilter").value = "all";
-  document.getElementById("signatureFilter").value = "all";
+  document.getElementById("countryFilter").value = "all";
   document.getElementById("classificationFilter").value = "all";
 
   currentSort = "default";
-  displayedWines = [...wines];
+  displayedWines = shuffleArray(wines);
   displayWines(displayedWines);
 }
 
-// Helpers
+function shuffleArray(array) {
+  const shuffled = [...array];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+}
+
 function capitalize(text) {
   if (!text || typeof text !== "string") return "";
   return text.charAt(0).toUpperCase() + text.slice(1);

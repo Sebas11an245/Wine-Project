@@ -1,25 +1,40 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   margin: 0;
   background: #f5f5f5;
   color: #222;
 }
 
 header {
-  background: linear-gradient(90deg, #7b1e3a, #a8325a);
+  background: linear-gradient(90deg, #520010, #a8325a);
   color: white;
   padding: 28px 20px;
   text-align: center;
+  font-size: 2em;
+}
+
+main {
+  padding: 0 10vw;
 }
 
 h1 {
   margin: 0;
   letter-spacing: 1px;
+  font-family: "Yesteryear", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  color: #FFEBEF;
 }
 
 .subtitle {
   margin-top: 8px;
   opacity: 0.95;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .controls {
@@ -84,17 +99,33 @@ button:hover {
 }
 
 .card h3 {
-  margin: 12px 0 8px;
+  margin: 12px 0 0;
+  font-family: "Jim Nightshade", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
 }
 
 .type {
   font-weight: bold;
   text-transform: capitalize;
+  margin: 4px 0 12px;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.red { color: darkred; }
-.white { color: goldenrod; }
-.sparkling { color: teal; }
+.red {
+  color: darkred;
+}
+
+.white {
+  color: goldenrod;
+}
+
+.sparkling {
+  color: #dca7aa;
+}
 
 .variant-box {
   margin-top: 12px;

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wines of the World</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Jim+Nightshade&family=Playfair+Display+SC&family=Yesteryear&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
-    <h1>🍷 Wines of the World</h1>
+    <h1>Wines of the World</h1>
     <p class="subtitle">Explore grapes, regions, and sparkling traditions across the globe.</p>
 
     <div class="controls">
@@ -29,20 +33,18 @@
         <option value="Oceania">Oceania</option>
       </select>
 
-      <select id="signatureFilter">
-        <option value="all">All Signature Regions</option>
-        <option value="Napa Valley">Napa Valley</option>
-        <option value="Willamette Valley">Willamette Valley</option>
-        <option value="Barossa Valley">Barossa Valley</option>
-        <option value="Marlborough">Marlborough</option>
-        <option value="Mosel">Mosel</option>
-        <option value="Bordeaux">Bordeaux</option>
-        <option value="Mendoza">Mendoza</option>
-        <option value="Rioja">Rioja</option>
-        <option value="Tuscany">Tuscany</option>
-        <option value="Loire Valley">Loire Valley</option>
-        <option value="Penedès">Penedès</option>
-        <option value="Champagne">Champagne</option>
+      <select id="countryFilter">
+        <option value="all">All Countries</option>
+        <option value="USA">USA</option>
+        <option value="France">France</option>
+        <option value="Italy">Italy</option>
+        <option value="Spain">Spain</option>
+        <option value="Germany">Germany</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Chile">Chile</option>
+        <option value="Australia">Australia</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Canada">Canada</option>
       </select>
 
       <select id="classificationFilter">
@@ -63,4 +65,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
