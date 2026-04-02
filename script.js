@@ -60,14 +60,14 @@ function displayWines(wineList) {
       <p class="meta"><strong>Classification:</strong> ${capitalize(wine.classification)}</p>
       <p class="meta"><strong>Aliases:</strong> ${wine.aliases.join(", ")}</p>
 
-      <p>${wine.familyNotes}</p>
+      <p>${variant.familyNotes}</p>
 
       <div class="variant-box">
         <p><strong>Showing:</strong> ${variant.label}</p>
-        <p><strong>🌍 Continent:</strong> ${variant.continent}</p>
-        <p><strong>🏳️ Country:</strong> ${variant.country}</p>
-        <p><strong>📍 Region:</strong> ${variant.region}</p>
-        <p><strong>🍇 Signature Region:</strong> ${variant.signatureRegion}</p>
+        <p><strong>Continent:</strong> ${variant.continent}</p>
+        <p><strong>Country:</strong> ${variant.country}</p>
+        <p><strong>Region:</strong> ${variant.region}</p>
+        <p><strong>Signature Region:</strong> ${variant.signatureRegion}</p>
 
         <p><strong>Body:</strong> ${capitalizeWords(variant.body)}</p>
         <p><strong>Sweetness:</strong> ${capitalizeWords(variant.sweetness)}</p>
